@@ -20,10 +20,10 @@ function theme_options_do_page() {
 	?>
 	<script type="text/javascript">
 		jQuery(document).ready(function($){
-			$('#color_picker_color1').farbtastic('#color1');            
+			$('#color_picker_color1').farbtastic('#color1');
 		});
 	</script>
-	
+
 	<div class="wrap">
 		<?php screen_icon(); echo "<h2>" . wp_get_theme() . __( ' Options', 'wordpress-svbtle' ) . "</h2>"; ?>
 
@@ -33,7 +33,7 @@ function theme_options_do_page() {
 
 		<form method="post" action="options.php">
 			<?php settings_fields( 'sample_options' ); ?>
-			<?php $options = get_option( 'svbtle_options' ); 
+			<?php $options = get_option( 'svbtle_options' );
 				  if( ! is_null( $options['color'] ) && '' != $options['color'] )
 				  	$color = esc_attr( $options['color'] );
 				  else
@@ -90,10 +90,29 @@ function theme_options_do_page() {
 						</td>
 					</tr>
 
+					<tr>
+						<th><?php _e( 'Remove Logo', 'wordpress-svbtle' ); ?></th>
+						<td>
+							<input type="checkbox" name="svbtle_options[remove_logo]" value="1"
+
+							<?php if ($options['remove_logo'] == 1): ?>
+								checked="checked"
+							<?php endif ?>
+							>
+						</td>
+					</tr>
+
+					<tr>
+						<th><?php _e( 'Profile Image Link', 'wordpress-svbtle' ); ?></th>
+						<td>
+							<input class="regular-text" type="text" name="svbtle_options[profile_image_link]" value="<?php esc_attr_e( $options['profile_image_link'] ); ?>" />
+						</td>
+					</tr>
+
 			</table>
-				
-			<p class="submit"><input type="submit" class="button-primary" value="<?php _e( 'Save Options', 'wordpress-svbtle' ); ?>" /></p>			
-			
+
+			<p class="submit"><input type="submit" class="button-primary" value="<?php _e( 'Save Options', 'wordpress-svbtle' ); ?>" /></p>
+
 		</form>
 	</div>
 	<?php
@@ -105,7 +124,7 @@ function theme_options_validate( $input ) {
 	// if ( ! isset( $input['anchor'] ) )
 	// 	$input['anchor'] = null;
 	// $input['anchor'] = ( $input['anchor'] == 1 ? 1 : 0 );
-	// 
+	//
 	// if ( ! isset( $input['pulse'] ) )
 	// 	$input['pulse'] = null;
 	// $input['pulse'] = ( $input['pulse'] == 1 ? 1 : 0 );

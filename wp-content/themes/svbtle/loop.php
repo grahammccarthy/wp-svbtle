@@ -13,9 +13,9 @@
 <?php while ( have_posts() ) : the_post(); ?>
 	<?php $options = get_option ( 'svbtle_options' ); ?>
 
-	<?php $kudos = get_post_meta($post->ID, '_wp-svbtle-kudos', true); 
+	<?php $kudos = get_post_meta($post->ID, '_wp-svbtle-kudos', true);
 				if ($kudos > "") { $kudos = $kudos; } else { $kudos = "0"; } ?>
-				
+
 		<article id="<?php the_ID(); ?>" class="post">
 
 			<h2 class="entry-title"><?php print_post_title(); ?></h2>
@@ -34,18 +34,18 @@
 	<?php endif; ?>
 
 
-			
-			
+
+
 			<aside class="kudo kudoable" id="<?php the_ID(); ?>">
 				<a href="?" class="kudobject">
 					<div class="opening clearfix">
 						<span class="circle">&nbsp;</span>
 					</div>
 				</a>
-		
+
 				<a href="?" class="counter">
 					<span class="num"><?php echo $kudos; ?></span>
-					<span class="txt">Kudos</span>
+					<span class="txt"></span> <?php //Kudos ?>
 				</a>
 			</aside>
 		</article><!-- #post-## -->
@@ -64,6 +64,6 @@
 	  <span class="prev">
 			<?php previous_posts_link( __( '←&nbsp;&nbsp;&nbsp;Newer', 'boilerplate' ) ); ?>
 		</span>
-	
+
 	</nav>
 <?php endif; ?>

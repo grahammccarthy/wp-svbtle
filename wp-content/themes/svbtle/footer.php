@@ -246,7 +246,7 @@
 	    function(t) {
 	        this == t.target && n.enableFormElements(e(this))
 	    })
-	})(jQuery),	
+	})(jQuery),
 	function(e) {
 	    function t() {
 	        if (o.jStorage) try {
@@ -437,7 +437,7 @@
 	    }
 	    function r(t) {
 	        clearTimeout(e),
-	        t.children(".counter").children("span.txt").html("Kudos"),
+	        t.children(".counter").children("span.txt").html(""), //Kudos
 	        t.children(".counter").children("span.num").show(),
 	        t.removeClass("active")
 	    }
@@ -451,7 +451,7 @@
 	        });
 	        var n = parseInt(e.find("span.num").text().replace(/,/g, "")) - 1;
 	        e.find("span.num").text(n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")),
-	        e.children(".counter").children("span.txt").html("Kudos"),
+	        e.children(".counter").children("span.txt").html(""), //Kudos
 	        e.children(".counter").children("span.num").show(),
 	        e.removeClass("complete deletable"),
 	        e.addClass("kudoable")
@@ -467,7 +467,7 @@
 	        });
 	        var n = parseInt(e.find("span.num").text().replace(/,/g, "")) + 1;
 	        e.find("span.num").text(n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")),
-	        e.children(".counter").children("span.txt").html("Kudos"),
+	        e.children(".counter").children("span.txt").html(""), //Kudos
 	        e.children(".counter").children("span.num").show(),
 	        e.addClass("complete"),
 	        e.removeClass("kudoable active")
@@ -544,7 +544,7 @@
 			    $("li.text_field").removeClass("active"), $("li.text_field").first().addClass("active")
 			});
 </script>
-		
+
 		<?php wp_footer(); ?>
 	</body>
 </html>

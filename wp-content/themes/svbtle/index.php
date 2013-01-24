@@ -1,11 +1,14 @@
-<?php 
+<?php
 
 get_header();
+
+date_default_timezone_set('America/Toronto');
+
 
 ?>
 
 <div class="entry-meta">
-	
+
 </div><!-- .entry-meta -->
 
 <header id="begin">
@@ -16,6 +19,6 @@ get_header();
 
 get_template_part( 'loop', 'index' );
 
-get_footer(); 
+get_footer();
 
 ?>
