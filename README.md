@@ -1,7 +1,7 @@
 # wp-svbtle
 #### Wordpress admin & Theme inspired by svbtle.com. [Follow us on twitter][]
 
-  [Follow us on twitter]: http://twitter.com/gravityonmars
+  [Follow me on twitter]: http://twitter.com/gravityonmars
 
 [View Demo][]
 
@@ -38,7 +38,7 @@ Admin area & theme are 100% independent from each other!
 ### Isn't this unoriginal?
 Yes, in the same way svbtle is unoriginal. [See the original][] ["inspiration" for svbtle].
 
-[See the original]: http://archives.drawar.com
+[See the original]: https://news.ycombinator.com/item?id=4405331
 
 ## License 
 

@@ -1,12 +1,12 @@
 /*
-	Theme Name: Svbtle
-	Theme URI: http://wp-svbtle.com/
-	Github Theme URI: https://github.com/gravityonmars/wp-svbtle
-	Author: Gravity On Mars
-	Author URI: http://themeskult.com/
-	Version: v4.1.7
-	License: GNU General Public License v2.0
-	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Theme Name: Svbtle
+Theme URI: http://wp-svbtle.com/
+Github Theme URI: https://github.com/gravityonmars/wp-svbtle
+Author: Gravity On Mars
+Author URI: http://themeskult.com/
+Version: v4.1.7
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{
@@ -160,6 +160,7 @@ ol.commentlist li.comment.byuser #respond .form-submit{margin-left: 0}
 
 
 article.post {overflow: visible}
+
 
 #respond .comment-subscription-form{margin-bottom: 10px}
 

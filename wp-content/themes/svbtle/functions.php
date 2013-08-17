@@ -254,7 +254,7 @@ function widgets_init() {
 
 function theme_header_style() {
     ?><style type="text/css">
-aside#logo div a,aside.kudo.complete span.circle{background-image: url(<?php header_image(); ?>);}
+figure.logo a, aside#logo div a, aside.kudo.complete span.circle{background-image: url(<?php header_image(); ?>);}
     </style><?php
 }
 function theme_admin_header_style() {
@@ -271,7 +271,7 @@ function register_custom_menu() {
 	register_nav_menu( 'primary', __( 'Svbtle Menu') );
 }
 
-require_once ( get_stylesheet_directory() . '/theme-options.php' );
+require_once ( get_template_directory() . '/theme-options.php' );
 
 
 
@@ -432,7 +432,7 @@ endif; // ends check for wp_svbtle_comment()
 function implement_ajax() {
 	global $wpdb;
 
-	$post_id = mysql_real_escape_string($_POST['article']);
+	$post_id = intval($_POST['article']);
 
 	$kudos = get_post_meta( $post_id , '_wp-svbtle-kudos', true );
 	$new_kudos = $kudos + 1;
@@ -451,7 +451,7 @@ function remove_kudos() {
 	
 	global $wpdb;
 
-	$post_id = mysql_real_escape_string($_POST['article']);
+	$post_id = intval($_POST['article']);
 
 	$kudos = get_post_meta( $post_id , '_wp-svbtle-kudos', true );
 	$new_kudos = $kudos - 1;
@@ -491,7 +491,7 @@ function add_items($admin_bar)
     $args = array(
             'id'    => 'wp-svbtle-editor',
             'title' => 'wp-svbtle editor',
-            'href'  => get_bloginfo('url') . '/wp-svbtle',
+            'href'  => get_bloginfo('url') . '/wp-svbtle/',
             'meta'  => array('title' => __('wp-svbtle editor'))
             );
  
